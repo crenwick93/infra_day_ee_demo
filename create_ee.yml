@@ -1,0 +1,9 @@
+- name: Create Ansible Execution Environment
+  hosts: aws_ee
+  gather_facts: false
+  vars:
+    # For demo purposes
+    ee_prune_images: false
+  roles:
+    - infra.ee_utilities.ee_builder
+  

@@ -1,0 +1,8 @@
+2023-04-03T07:45:58.341331+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2023-04-03T07:45:58.343266+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2023-04-03T07:45:58.343339+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: inspecting object: unable to inspect "quay.io/ansible/creator-ee:v0.9.1": failed to find image quay.io/ansible/creator-ee:v0.9.1: quay.io/ansible/creator-ee:v0.9.1: image not known
+
+2023-04-03T07:47:16.522811+00:00 ERROR 'ansible_navigator.actions.collections._parse' Unable to extract collection json from stdout
+2023-04-03T07:47:48.729463+00:00 ERROR 'ansible_navigator.actions.collections._parse' Unable to extract collection json from stdout
+2023-04-03T07:48:48.611940+00:00 CRITICAL 'ansible_navigator.actions.run_a644._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ba96de1d-36e6-4d37-9569-9f6a5cd1ceec', 'counter': 1, 'stdout': 'Error: statfs /private/tmp/com.apple.launchd.EVeSHgqKwL: no such file or directory', 'start_line': 0, 'end_line': 1, 'runner_ident': 'f30b2cfc-6912-44c6-b99c-0628aff7589f', 'created': '2023-04-03T07:48:48.611132'}

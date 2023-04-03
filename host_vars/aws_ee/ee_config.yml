@@ -1,0 +1,30 @@
+ee_pull_collections_from_hub: false
+ee_image_push: false
+ee_list:
+  - name: aws_ee
+    tag: dev
+    # Collections to include in EE
+    collections:
+      - name: community.aws
+      - name: community.general
+
+# Remember ansible-builder will pull in python deps and bindeps corresponding to the 
+# collections listed above automatically. Only add the extra dependancies below
+
+# Python Dependancies 
+    python: 
+      - botocore>=1.21.0
+      - boto3>=1.18.0
+
+# # System Dependancies
+    bindep:
+      - unzip
+
+    prepend: 
+    - RUN whoami
+    - RUN cat /etc/os-release
+    append:
+    # Install AWS CLi
+    - RUN curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip && unzip awscliv2.zip && ./aws/install 
+    # Install oc-mirror plugin
+    - RUN curl https://mirror.openshift.com/pub/openshift-v4/amd64/clients/ocp/stable/oc-mirror.tar.gz -o oc-mirror.tar.gz && tar xvzf oc-mirror.tar.gz && chmod +x oc-mirror && mv oc-mirror /usr/local/bin/.
