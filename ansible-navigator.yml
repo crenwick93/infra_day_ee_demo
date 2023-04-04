@@ -1,0 +1,15 @@
+---
+ansible-navigator:
+  ansible:
+    playbook:
+      path: test.yml
+  execution-environment:
+    container-engine: podman
+    enabled: true
+    #EE containing collections and dependancies
+    image: localhost/aws_ee:dev
+    pull:
+      policy: missing
+  playbook-artifact:
+    # Artifact creation set to false - to be discussed
+    enable: False

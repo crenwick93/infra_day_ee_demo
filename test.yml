@@ -5,4 +5,8 @@
   gather_facts: false
   tasks:
     - name: Run oc-mirror
-      cmd: oc-mirror --version
+      command: oc-mirror --help
+      register: result
+
+    - debug:
+        var: result.stdout_lines

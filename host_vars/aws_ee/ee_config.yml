@@ -1,5 +1,3 @@
-ee_pull_collections_from_hub: false
-ee_image_push: false
 ee_list:
   - name: aws_ee
     tag: dev
@@ -7,9 +5,6 @@ ee_list:
     collections:
       - name: community.aws
       - name: community.general
-
-# Remember ansible-builder will pull in python deps and bindeps corresponding to the 
-# collections listed above automatically. Only add the extra dependancies below
 
 # Python Dependancies 
     python: 
@@ -19,7 +14,6 @@ ee_list:
 # # System Dependancies
     bindep:
       - unzip
-
     prepend: 
     - RUN whoami
     - RUN cat /etc/os-release

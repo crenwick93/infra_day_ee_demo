@@ -4,6 +4,10 @@
   vars:
     # For demo purposes
     ee_prune_images: false
+    ee_pull_collections_from_hub: false
+    ee_image_push: false
+  vars_files:
+    - registry_creds.yml
   roles:
     - infra.ee_utilities.ee_builder
   
