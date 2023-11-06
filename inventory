@@ -1,3 +1,3 @@
-aws_ee ansible_connection=local
-
-k8_ee ansible_connection=local
+[lab]
+server1
+server2
